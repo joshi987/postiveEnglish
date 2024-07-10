@@ -1,0 +1,26 @@
+.custom-header {
+    background-color: red;
+    background-size: cover; /* Cover the entire element
+    background-position: center; /* Center the background image */
+    box-shadow: 0 4px 7px rgba(0, 0, 0, 0.1); /* Shadow */
+    border-radius: 12px; /* Rounded corners */
+    position: relative;
+    top: -130px;
+    width: 60%;
+  }
+  
+  
+  
+  .logo-image {
+    position: relative;
+    top: 10px;
+    width: 90%; /* Adjust the logo width */
+    height: 50%; /* Maintain aspect ratio */
+  }
+  .header-container {
+    background-image: url('../assets/img/Dinner.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  

@@ -1,0 +1,13 @@
+/* .app-background {
+  background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.7), rgba(255, 0, 150, 0.7)), url('./assets/img/Playing.webp');
+} */
+
+.app-background {
+  background: #f7f7f7; /* Example gradient */
+}
+
+
+/* 
+.app-background {
+  background: rgb(690, 1, 100)
+} */
