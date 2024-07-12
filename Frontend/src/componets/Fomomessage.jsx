@@ -13,9 +13,9 @@ function Fomomessage() {
             content="Digital world, cognitive development, mental stamina, educational game, learning, cognitive abilities, memory retention, attention span, interactive task, interactive game, boost memory, fun activities, focus duration, critical thinking, problem-solving skills, analytical span"
           />
         </Helmet>
-        <div className="relative p-8 m-0 md:m-8 rounded-2xl shadow-xl bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-white min-w-full md:min-w-96">
+        <div className="relative p-8 m-0 md:m-8 rounded-2xl shadow-xl bg-blue-100 text-black min-w-full md:min-w-96">
           {/* Content */}
-          <div className="relative text-black">
+          <div className="relative">
             <h2 className="text-2xl md:text-3xl font-bold mb-4 text-green-600">Our Solution</h2>
             <p className="font-bold text-sm md:text-lg leading-relaxed mb-4">
               Our educational game combines fun and learning to help children improve their focus and cognitive abilities through engaging activities.

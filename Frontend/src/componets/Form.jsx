@@ -67,9 +67,9 @@ const Form = () => {
       <div className="flex justify-center">
         <button
           onClick={() => setFormVisible(true)}
-          className="bg-gradient-to-r from-blue-900 to-green-900 text-white font-bold py-2 px-4 rounded-full shadow-lg text-lg glow-button transition duration-300 ease-in-out transform hover:scale-105"
+          className="bg-gradient-to-r from-gray-200 to-gray-400 text-black font-bold py-3 px-6 rounded-full shadow-lg text-xl glow-button transition duration-300 ease-in-out transform hover:scale-105"
         >
-          <span className="text-yellow-100 font-extrabold tracking-wide">Join Us</span>
+          <span className="text-gray-800 font-extrabold tracking-wide">Join Today</span>
         </button>
       </div>
 
