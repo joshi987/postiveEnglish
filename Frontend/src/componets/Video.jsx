@@ -1,4 +1,3 @@
-import React from "react";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import "./Css/Video.css";
 import Negative from "../assets/video/negative.mp4";
@@ -9,7 +8,7 @@ const Video = () => {
     <HelmetProvider>
       <>
         <Helmet>
-          <title>Brain Voyage - Boost Your Child's Brainpower</title>
+          <title>BrainVoyage - Boost Your Child's Brainpower</title>
           <meta
             name="description"
             content="Don't Miss Out! Boost Your Child's Brainpower and Stay Ahead with Our Engaging Learning Adventures!"
@@ -21,7 +20,7 @@ const Video = () => {
         </Helmet>
 
         {/* Wave background */}
-        <div className="relative bg-gradient-to-r from-purple-100/90 to-purple-300/100 p-4 pb-0">
+        <div className="relative bg-gradient-to-r  p-4 pb-0">
           {" "}
           {/* Reduced bottom padding */}
           <svg

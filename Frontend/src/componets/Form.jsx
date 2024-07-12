@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { FaTimes } from 'react-icons/fa';
 import './Css/Form.css';
 import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { motion } from 'framer-motion';
+
 export const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 
 const Form = () => {
@@ -16,9 +18,14 @@ const Form = () => {
   const [otherReference, setOtherReference] = useState(''); // State for other reference text
   const [formVisible, setFormVisible] = useState(false);
 
-  const handleToggleForm = () => {
-    setFormVisible(!formVisible);
-  };
+  useEffect(() => {
+    const timerId = setTimeout(() => {
+      setFormVisible(true);
+    }, 10000); // 10000 milliseconds = 10 seconds
+
+    // Cleanup the timer on component unmount
+    return () => clearTimeout(timerId);
+  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -59,10 +66,10 @@ const Form = () => {
     <div className="container mx-auto mt-4">
       <div className="flex justify-center">
         <button
-          onClick={handleToggleForm}
-          className="bg-gradient-to-r from-blue-900 to-green-900 hover:from-blue-700 text-white font-bold py-2 px-4 rounded-full shadow-lg text-lg glow-button"
+          onClick={() => setFormVisible(true)}
+          className="bg-gradient-to-r from-blue-900 to-green-900 text-white font-bold py-2 px-4 rounded-full shadow-lg text-lg glow-button transition duration-300 ease-in-out transform hover:scale-105"
         >
-          Sign Up
+          <span className="text-yellow-100 font-extrabold tracking-wide">Join Us</span>
         </button>
       </div>
 
@@ -71,23 +78,28 @@ const Form = () => {
           className="fixed top-0 left-0 w-full h-full flex items-center justify-center modal-backdrop bg-gray-900 bg-opacity-90 backdrop-blur-sm z-20"
           onClick={handleBackdropClick}
         >
-          <div className="relative max-w-sm w-full bg-white p-4 rounded-lg shadow-2xl overflow-hidden max-h-screen">
+          <motion.div
+            className="relative max-w-sm w-full bg-white p-4 rounded-lg shadow-2xl overflow-hidden max-h-screen"
+            initial={{ y: '-100vh' }}
+            animate={{ y: 0 }}
+            transition={{ type: 'spring', stiffness: 120 }}
+          >
             <button
-              onClick={handleToggleForm}
+              onClick={() => setFormVisible(false)}
               className="absolute top-0 right-0 m-2 text-gray-500 hover:text-gray-800 focus:outline-none"
             >
               <FaTimes />
             </button>
             <form onSubmit={handleSubmit}>
-              <h2 className="text-2xl font-extrabold mb-4 text-center text-indigo-600">Registration Form</h2>
+              <h2 className="text-2xl font-extrabold mb-4 text-center text-indigo-600">Connect With Us</h2>
               
               <div className="mb-2">
-                <label htmlFor="parentName" className="block text-sm font-medium text-indigo-700">Parent Name</label>
+                <label htmlFor="parentName" className="block text-sm font-medium text-indigo-700">Your Name</label>
                 <input
                   type="text"
                   id="parentName"
                   className="mt-1 block w-full px-2 py-1 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                  placeholder="Enter parent's name"
+                  placeholder="Enter your name"
                   value={parentName}
                   onChange={(e) => setParentName(e.target.value)}
                   required
@@ -185,7 +197,7 @@ const Form = () => {
                 </button>
               </div>
             </form>
-          </div>
+          </motion.div>
         </div>
       )}
       <ToastContainer />
