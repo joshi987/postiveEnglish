@@ -17,6 +17,7 @@ const Form = () => {
   const [reference, setReference] = useState('');
   const [otherReference, setOtherReference] = useState(''); // State for other reference text
   const [formVisible, setFormVisible] = useState(false);
+  const [loading, setLoading] = useState(false); // Loading state
 
   useEffect(() => {
     const timerId = setTimeout(() => {
@@ -29,6 +30,7 @@ const Form = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true); // Set loading to true when form submission starts
     const userData = {
       parentName,
       childAge,
@@ -53,6 +55,8 @@ const Form = () => {
     } catch (error) {
       console.error('Error registering user', error);
       toast.error('Failed to register user');
+    } finally {
+      setLoading(false); // Set loading to false after form submission
     }
   };
 
@@ -192,8 +196,9 @@ const Form = () => {
                 <button
                   type="submit"
                   className="w-full bg-indigo-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-indigo-700 focus:outline-none focus:bg-indigo-700 shadow-md"
+                  disabled={loading} // Disable button when loading
                 >
-                  Submit
+                  {loading ? 'Please wait...' : 'Submit'}
                 </button>
               </div>
             </form>
