@@ -52,8 +52,8 @@ const PORT = process.env.PORT || 5000;
 
 // Middleware
 const corsOptions = {
-  origin: 'https://your-frontend-domain.vercel.app', // Replace with your Vercel frontend domain
-  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  origin: 'https://brainvoyage.vercel.app/', // Replace with your Vercel frontend domain
+  methods: 'PUT',
   credentials: true,
   optionsSuccessStatus: 204
 };
