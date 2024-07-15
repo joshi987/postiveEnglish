@@ -513,10 +513,10 @@ const Form = () => {
 
   return (
     <div className="container mx-auto mt-4">
-      <div className="flex justify-center">
+    <div className="flex justify-center">
         <button
           onClick={() => setFormVisible(true)}
-          className="bg-gradient-to-r from-gray-200 to-gray-400 text-black font-bold py-3 px-6 rounded-full shadow-lg text-xl glow-button transition duration-300 ease-in-out transform hover:scale-105"
+          className="bg-gradient-to-r from-gray-200 to-gray-400 text-black font-bold py-2 px-4 md:py-3 md:px-6 rounded-full shadow-lg text-sm md:text-xl glow-button transition duration-300 ease-in-out transform hover:scale-105"
         >
           <span className="text-gray-800 font-extrabold tracking-wide">Join Today</span>
         </button>

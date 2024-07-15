@@ -1,3 +1,4 @@
+import React from 'react';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import Logo from '../assets/img/Brain.png';
 import Boy from '../assets/img/boy.png';
@@ -33,6 +34,9 @@ const Header = () => {
             </div>
           </div>
         </div>
+          <div className="block md:hidden mt-3">
+            <Form />
+          </div>
       </>
     </HelmetProvider>
   );

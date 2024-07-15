@@ -18,7 +18,7 @@ function App() {
         <Fomomessage />
         <BlogGrid />
         <div className="mb-8">
-        <Form />
+        {/* <Form /> */}
     </div>
         <Footer />
       </div>
