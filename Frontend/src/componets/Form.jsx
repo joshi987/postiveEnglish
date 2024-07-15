@@ -662,7 +662,7 @@ const Form = () => {
           </motion.div>
         </div>
       )}
-      <ToastContainer />
+      <ToastContainer autoClose={3000}  />
     </div>
   );
 };
