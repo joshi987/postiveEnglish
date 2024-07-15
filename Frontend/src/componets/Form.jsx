@@ -20,14 +20,14 @@ const Form = () => {
   const [formVisible, setFormVisible] = useState(false);
   const [loading, setLoading] = useState(false); // Loading state
 
-  useEffect(() => {
-    const timerId = setTimeout(() => {
-      setFormVisible(true);
-    }, 10000); // 10000 milliseconds = 10 seconds
+  // useEffect(() => {
+  //   const timerId = setTimeout(() => {
+  //     setFormVisible(true);
+  //   }, 10000); 
 
-    // Cleanup the timer on component unmount
-    return () => clearTimeout(timerId);
-  }, []);
+    
+  //   return () => clearTimeout(timerId);
+  // }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
