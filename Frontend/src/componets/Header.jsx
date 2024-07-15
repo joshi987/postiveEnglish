@@ -16,19 +16,19 @@ const Header = () => {
         </Helmet>
 
         {/* Header Section */}
-        <div className="top-0 z-50 bg-white shadow-md h-20 md:h-24 lg:h-28 flex items-center justify-between px-4 md:px-8 lg:px-12">
-          <div className="flex items-center space-x-1 md:space-x-2 relative">
-            <img src={Logo} alt="QuizQuest Logo" className="w-16 h-16 md:w-24 md:h-24 lg:w-32 lg:h-32" /> {/* Increased size */}
-            <div className="flex items-center space-x-1 md:space-x-2">
-              <img src={Boy} alt="Boy" className="w-8 h-8 md:w-12 md:h-12 lg:w-16 lg:h-16" /> {/* Increased size */}
-              <h1 className="text-sm font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-900 via-red-800 to-yellow-900 md:text-md lg:text-lg text-center shadow-lg">
-                Engaging activities designed to improve focus, memory, and cognitive skills in kids
-              </h1>
-              <img src={Girl} alt="Girl" className="hidden md:block md:w-12 md:h-12 lg:w-16 lg:h-16" /> {/* Increased size */}
+        <div className="top-0 z-50 bg-white shadow-md">
+          <div className="max-w-7xl mx-auto h-20 md:h-24 lg:h-28 flex items-center justify-between px-4 md:px-8 lg:px-12">
+            <div className="flex items-center space-x-4">
+              <img src={Logo} alt="QuizQuest Logo" className="w-16 h-16 md:w-24 md:h-24 lg:w-32 lg:h-32" />
+              <img src={Boy} alt="Boy" className="w-8 h-8 md:w-12 md:h-12 lg:w-16 lg:h-16" />
+              <div className="flex-grow text-center">
+                <h1 className="text-sm font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-900 via-red-800 to-yellow-900 md:text-md lg:text-lg text-center shadow-lg">
+                  Engaging activities designed to improve focus, memory, and cognitive skills in kids
+                </h1>
+              </div>
+              <img src={Girl} alt="Girl" className="hidden md:block md:w-12 md:h-12 lg:w-16 lg:h-16" />
             </div>
-          </div>
-          <div className="flex items-center">
-            <div className="hidden md:flex">
+            <div className="hidden md:block">
               <Form />
             </div>
           </div>
