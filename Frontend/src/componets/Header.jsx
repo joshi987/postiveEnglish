@@ -16,18 +16,15 @@ const Header = () => {
         </Helmet>
 
         {/* Header Section */}
-        <div className="relative flex flex-col items-center justify-center inset-0">
-          <div className="flex items-center space-x-2 md:space-x-4">
-            <img src={Logo} alt="QuizQuest Logo" className="w-24 h-24 md:w-32 md:h-32 lg:w-40 lg:h-40" />
-            <img src={Boy} alt="Boy" className="w-12 h-12 md:w-16 md:h-16 lg:w-24 lg:h-24" />
-            <h1 className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-900 via-red-800 to-yellow-900 md:text-2xl lg:text-2xl text-center shadow-lg">
-              Engaging activities designed to improve focus, memory, and cognitive skills in kids
-            </h1>
-            <img src={Girl} alt="Girl" className="hidden md:block md:w-16 md:h-16 lg:w-24 lg:h-24" /> {/* Hide on small screens */}
-            <div className="hidden md:flex md:items-center md:ml-4">
-              {/* <div className="border border-gray-300 rounded-lg p-4 m-4 shadow-md">
-                <Form />
-              </div> */}
+        <div className=" top-0 z-50 bg-white shadow-md h-20 md:h-24 lg:h-28 flex items-center justify-center"> {/* Increased height */}
+          <div className="flex items-center space-x-1 md:space-x-2 relative">
+            <img src={Logo} alt="QuizQuest Logo" className="w-16 h-16 md:w-24 md:h-24 lg:w-32 lg:h-32 absolute left-2" /> {/* Increased size and position */}
+            <div className="flex items-center space-x-1 md:space-x-2 pl-20 md:pl-28 lg:pl-36"> {/* Adjusted padding */}
+              <img src={Boy} alt="Boy" className="w-8 h-8 md:w-12 md:h-12 lg:w-16 lg:h-16" /> {/* Increased size */}
+              <h1 className="text-sm font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-900 via-red-800 to-yellow-900 md:text-md lg:text-lg text-center shadow-lg">
+                Engaging activities designed to improve focus, memory, and cognitive skills in kids
+              </h1>
+              <img src={Girl} alt="Girl" className="hidden md:block md:w-12 md:h-12 lg:w-16 lg:h-16" /> {/* Increased size */}
             </div>
           </div>
         </div>
