@@ -269,9 +269,7 @@ const Form = () => {
     };
 
     try {
-      const response = await axios.post(`${BACKEND_URL}/api/users/register`, userData, {
-        timeout: 10000, // Set a timeout for the request
-      });
+      const response = await axios.post(`${BACKEND_URL}/api/users/register`, userData);
 
       console.log('Response status:', response.status);
       console.log('Response data:', response.data);
