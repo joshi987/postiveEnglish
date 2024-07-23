@@ -232,7 +232,6 @@
 // export default Form;
 
 
-
 import { useState } from 'react';
 import { FaTimes } from 'react-icons/fa';
 import './Css/Form.css';
@@ -320,7 +319,7 @@ const Form = () => {
           onClick={handleBackdropClick}
         >
           <motion.div
-            className="relative max-w-sm w-full bg-white p-4 rounded-lg shadow-2xl overflow-hidden max-h-screen"
+            className="relative max-w-sm w-full bg-white p-4 rounded-lg shadow-2xl overflow-y-auto max-h-screen" // Added overflow-y-auto for scrollbar
             initial={{ y: '-100vh' }}
             animate={{ y: 0 }}
             transition={{ type: 'spring', stiffness: 120 }}
@@ -454,9 +453,10 @@ const Form = () => {
           </motion.div>
         </div>
       )}
-      <ToastContainer autoClose={3000} /> {/* Set autoClose globally */}
+      <ToastContainer closeOnClick /> {/* Added closeOnClick to ensure the cross button closes the toast */}
     </div>
   );
 };
 
 export default Form;
+
