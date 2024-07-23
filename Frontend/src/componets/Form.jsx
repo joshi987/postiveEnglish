@@ -450,12 +450,12 @@ const Form = () => {
                   {loading ? 'Please wait...' : 'Submit'}
                 </button>
               </div>
+    <ToastContainer autoClose={3000}/> 
             </form>
           </motion.div>
         </div>
       )}
     </div>
-    <ToastContainer autoClose={3000}/> 
     </>
   );
 };
