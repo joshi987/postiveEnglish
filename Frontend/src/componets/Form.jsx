@@ -303,6 +303,7 @@ const Form = () => {
   };
 
   return (
+    <>
     <div className="container mx-auto mt-4">
       <div className="flex justify-center">
         <button
@@ -453,8 +454,9 @@ const Form = () => {
           </motion.div>
         </div>
       )}
-      {/* <ToastContainer closeOnClick/> Added closeOnClick to ensure the cross button closes the toast */}
     </div>
+    <ToastContainer autoClose={3000}/> 
+    </>
   );
 };
 
