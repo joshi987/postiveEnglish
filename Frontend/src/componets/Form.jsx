@@ -236,8 +236,6 @@ import { useState } from 'react';
 import { FaTimes } from 'react-icons/fa';
 import './Css/Form.css';
 import axios from 'axios';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 import { motion } from 'framer-motion';
 
 export const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
@@ -274,7 +272,7 @@ const Form = () => {
       console.log('Response data:', response.data);
 
       if (response.status === 200 || response.status === 201) {
-        toast.success('User registered successfully', { autoClose: 3000 }); // Set autoClose to 3 seconds
+        alert('User registered successfully'); // Show success alert
         // Reset form fields
         setParentName('');
         setChildAge('');
@@ -290,7 +288,7 @@ const Form = () => {
       }
     } catch (error) {
       console.error('Error registering user:', error);
-      toast.error(`Failed to register user: ${error.message}`, { autoClose: 3000 }); // Set autoClose to 3 seconds
+      alert(`Failed to register user: ${error.message}`); // Show error alert
     } finally {
       setLoading(false); // Set loading to false after form submission
     }
@@ -452,7 +450,6 @@ const Form = () => {
               </div>
             </form>
           </motion.div>
-    <ToastContainer autoClose={3000}/> 
         </div>
       )}
     </div>
