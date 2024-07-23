@@ -453,7 +453,7 @@ const Form = () => {
           </motion.div>
         </div>
       )}
-      <ToastContainer closeOnClick /> {/* Added closeOnClick to ensure the cross button closes the toast */}
+      {/* <ToastContainer closeOnClick/> Added closeOnClick to ensure the cross button closes the toast */}
     </div>
   );
 };
